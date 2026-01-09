@@ -4,7 +4,6 @@ import numpy as np
 
 diabetes_model = joblib.load("../xg_diabetes_model.pkl")
 
-st.title("Welcome to my portfolio Page")
 st.write("This is the main application page.")
 
 st.header("Diabetes Prediction")
