@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-diabetes_model = joblib.load("../xg_diabetes_model.pkl")
+diabetes_model = joblib.load("xg_diabetes_model.pkl")
 
 st.write("This is the main application page.")
 
