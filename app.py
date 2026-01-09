@@ -1,8 +1,15 @@
 import streamlit as st
 import joblib
 import numpy as np
+from pathlib import Path
 
-diabetes_model = joblib.load("xg_diabetes_model.pkl")
+@st.cache_resource
+def load_model():
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    model_path = BASE_DIR / "xg_diabetes_model.pkl"
+    return joblib.load(model_path)
+
+diabetes_model = load_model()
 
 st.write("This is the main application page.")
 
